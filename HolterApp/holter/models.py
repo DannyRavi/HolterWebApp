@@ -8,7 +8,9 @@ TITLE_CHOICES = [
 ]
 
 # Create your models here.
+
 class Profiles(models.Model):
+    # id = models.AutoField(null=True)
     nation_code = models.CharField(max_length=10, blank=True, default='1234567890')
     phone_number = models.CharField(max_length=11, blank=True, default='')
     first_name = models.CharField(max_length=20, blank=True, default='')
