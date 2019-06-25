@@ -5,4 +5,5 @@ app_name = "holter"
 
 urlpatterns = [
     path('', views.ProfileView.as_view(), name="profile_list"),
+    
 ]
