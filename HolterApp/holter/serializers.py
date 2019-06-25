@@ -9,3 +9,5 @@ class ProfileSerializerV1(serializers.ModelSerializer):
 
     def create(self, validated_data):
         return Profiles.objects.create(**validated_data)    
+
+

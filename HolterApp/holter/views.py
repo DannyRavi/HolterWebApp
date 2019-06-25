@@ -15,7 +15,18 @@ class ProfileView(generics.ListCreateAPIView):
     queryset = Profiles.objects.all()
     permission_classes = (IsAuthenticated,)
 
+
+    # def get(self, request, *args, **kwargs):
+    #     return super(ProfileView, self).get(request, *args, **kwargs)
+
+    # def get(self, request, pk, *args, **kwargs):
+    # contacts = Profiles.objects.get(pk=pk)
+    # serializer = ProfileSerializerV1(contacts)
+    # return Response(serializer.data)
+
 class ProfileDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Profiles.objects.all()
     serializer_class = ProfileSerializerV1
-    
+    # permission_classes = (IsAuthenticated,)
+
+
