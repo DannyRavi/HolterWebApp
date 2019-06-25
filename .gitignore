@@ -136,3 +136,9 @@ dmypy.json
 .pyre/
 
 # End of https://www.gitignore.io/api/django
+.vscode/arduino.json
+.gitignore
+.vscode/c_cpp_properties.json
+.vscode/settings.json
+data.txt
+todo
