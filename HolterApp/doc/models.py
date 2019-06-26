@@ -1,6 +1,8 @@
 from django.db import models
-from profiles.models import Profiles
 from datetime import datetime
+from django.forms import ModelForm
+from datetime import datetime
+from holter.models import Profiles
 # Create your models here.
 
 
@@ -15,5 +17,5 @@ class Docs(models.Model):
     cause_of_date = models.TextField(max_length=1000, blank=True, default='')
     patient_condition_discharge = models.TextField(max_length=1000, blank=True, default='')
     recommendtions_discharge = models.TextField(max_length=1000, blank=True, default='')
-    author = models.ForeignKey(Profiles,related_name='posts',on_delete=models.CASCADE)
+    author = models.ForeignKey(Profiles,related_name='docs',on_delete=models.CASCADE)
 
