@@ -7,15 +7,24 @@ from holter.models import Profiles
 
 
 class Docs(models.Model):
-    attending_physician = models.CharField(max_length=100, blank=True, default='')
-    admission_date =  models.DateTimeField(default=datetime.now, blank=True)
-    date_of_discharge =  models.DateTimeField(default=datetime.now, blank=True)
-    patient_history = models.TextField(max_length=1000, blank=True, default='')
-    primary_dignosis = models.TextField(max_length=1000, blank=True, default='')
-    final_dignosis = models.TextField(max_length=1000, blank=True, default='')
-    medical_surgical_procedures = models.TextField(max_length=1000, blank=True, default='')
-    cause_of_date = models.TextField(max_length=1000, blank=True, default='')
-    patient_condition_discharge = models.TextField(max_length=1000, blank=True, default='')
-    recommendtions_discharge = models.TextField(max_length=1000, blank=True, default='')
-    author = models.ForeignKey(Profiles,related_name='docs',on_delete=models.CASCADE)
+
+    user = models.ForeignKey(Profiles,related_name='docs',on_delete=models.CASCADE)
+    data_date =  models.DateTimeField(default=datetime.now, blank=True)
+    
+    lead_1 = models.CharField(max_length=10000, blank=True, default='')
+    lead_2 = models.CharField(max_length=10000, blank=True, default='')
+    lead_3 = models.CharField(max_length=10000, blank=True, default='')
+    lead_4 = models.CharField(max_length=10000, blank=True, default='')
+    lead_5 = models.CharField(max_length=10000, blank=True, default='')
+    lead_6 = models.CharField(max_length=10000, blank=True, default='')
+    lead_7 = models.CharField(max_length=10000, blank=True, default='')
+    lead_8 = models.CharField(max_length=10000, blank=True, default='')
+    lead_9 = models.CharField(max_length=10000, blank=True, default='')
+    lead_10 = models.CharField(max_length=10000, blank=True, default='')
+    lead_11 = models.CharField(max_length=10000, blank=True, default='')
+    lead_12 = models.CharField(max_length=10000, blank=True, default='')
+
+    eject_button = models.BooleanField()
+
+    
 

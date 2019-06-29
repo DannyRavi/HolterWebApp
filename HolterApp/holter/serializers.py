@@ -1,7 +1,6 @@
 from rest_framework import serializers
 from .models import Profiles
-from doc.models import Docs
-from doc.serializers import DocsSerializer
+
 
 class ProfileSerializerV1(serializers.ModelSerializer):
 
