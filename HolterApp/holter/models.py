@@ -1,6 +1,7 @@
 from django.db import models
 from django.forms import ModelForm
 from datetime import datetime
+from django.contrib.auth.models import User
 
 TITLE_CHOICES = [
     ('MR', 'Mr.'),
@@ -9,8 +10,10 @@ TITLE_CHOICES = [
 
 # Create your models here.
 
+
+# Create your models here.
 class Profiles(models.Model):
-    # id = models.AutoField(null=True)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     nation_code = models.CharField(max_length=10, blank=True, default='1234567890')
     phone_number = models.CharField(max_length=11, blank=True, default='')
     first_name = models.CharField(max_length=20, blank=True, default='')
