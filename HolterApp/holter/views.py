@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Profiles
-from .serializers import ProfileSerializerV1
+from .serializers import ProfileSerializerV1 ,PaitentApp
 from rest_framework import generics
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -31,5 +31,18 @@ class ProfileDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Profiles.objects.all()
     serializer_class = ProfileSerializerV1
     permission_classes = (IsOwner,)
+
+
+
+class ProfileViewPatientApp(generics.ListCreateAPIView):
+    serializer_class = PaitentApp
+    queryset = Profiles.objects.all()
+    permission_classes = (IsAuthenticatedOrReadOnly,)
+
+
+class ProfileDetailPatientApp(generics.RetrieveUpdateDestroyAPIView):
+    serializer_class = PaitentApp
+    queryset = Profiles.objects.all()
+    permission_classes = (IsOwner,)    
 
 
