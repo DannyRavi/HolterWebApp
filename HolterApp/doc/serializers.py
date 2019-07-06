@@ -3,6 +3,7 @@ from .models import Docs
 
 
 
+
 class DocsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Docs
