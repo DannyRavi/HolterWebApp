@@ -1,15 +1,13 @@
 from rest_framework import serializers
 from .models import Profiles
-<<<<<<< HEAD
 
-=======
 import re
 from rest_framework.exceptions import ValidationError
 from doc.serializers import DocsSerializer
 from django.contrib.auth.models import User
 from doc.models import Docs
 from django.shortcuts import get_object_or_404
->>>>>>> master
+
 
 class ProfileSerializerV1(serializers.ModelSerializer):
 
@@ -41,11 +39,10 @@ class PaitentApp(serializers.ModelSerializer):
     posts = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
     post = DocsSerializer(write_only=True, required=False)
     user = serializers.IntegerField(write_only=True)
+    
     class Meta:
         model = Profiles
-    mobile_number = models.CharField(max_length=11, blank=True, default='')
-         fields = ('nation_code', 'first_name', 'last_name', 'phone_number','age','height','weigth',
-            'address','postal_code','email','gender')
+        fields = ('nation_code', 'first_name', 'last_name', 'phone_number','age','height','weigth','address','postal_code','email','gender')
 
     
     def create(self, validated_data):
