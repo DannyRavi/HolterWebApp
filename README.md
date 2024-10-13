@@ -10,6 +10,7 @@ Appointment scheduling: Patients can schedule appointments with healthcare provi
 Health education: Access to educational resources and information about heart disease prevention and management.
 Communication with healthcare providers: Secure messaging and communication with doctors and other healthcare professionals.
 
+
 # Prerequisites
 Python 3.x
 Django 3.x or later
